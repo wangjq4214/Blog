@@ -79,16 +79,19 @@
 
 
 
-<meta name="description" content="不忘初心 方能始终">
-<meta property="og:type" content="website">
+<meta name="description" content="Vue学习笔记 一、Vue实例1. 创建一个Vue实例每个 Vue 应用都是通过用 ==Vue== 函数创建一个新的 Vue 实例开始的，当创建一个 Vue 实例时，你可以传入一个==选项对象==。123var vm = new Vue(&amp;#123;  // 选项&amp;#125;) 2. 数据与方法 当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了其 ==data== 对象中能找到的所">
+<meta property="og:type" content="article">
 <meta property="og:title" content="QuanKing">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/07/14/Vue学习笔记-实例/index.html">
 <meta property="og:site_name" content="QuanKing">
-<meta property="og:description" content="不忘初心 方能始终">
+<meta property="og:description" content="Vue学习笔记 一、Vue实例1. 创建一个Vue实例每个 Vue 应用都是通过用 ==Vue== 函数创建一个新的 Vue 实例开始的，当创建一个 Vue 实例时，你可以传入一个==选项对象==。123var vm = new Vue(&amp;#123;  // 选项&amp;#125;) 2. 数据与方法 当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了其 ==data== 对象中能找到的所">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cn.vuejs.org/images/lifecycle.png">
+<meta property="og:updated_time" content="2018-07-14T10:23:08.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QuanKing">
-<meta name="twitter:description" content="不忘初心 方能始终">
+<meta name="twitter:description" content="Vue学习笔记 一、Vue实例1. 创建一个Vue实例每个 Vue 应用都是通过用 ==Vue== 函数创建一个新的 Vue 实例开始的，当创建一个 Vue 实例时，你可以传入一个==选项对象==。123var vm = new Vue(&amp;#123;  // 选项&amp;#125;) 2. 数据与方法 当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了其 ==data== 对象中能找到的所">
+<meta name="twitter:image" content="https://cn.vuejs.org/images/lifecycle.png">
 
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/14/Vue学习笔记-实例/"/>
 
 
 
 
 
-  <title>QuanKing</title>
+  <title> | QuanKing</title>
   
 
 
@@ -143,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +219,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -249,9 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/14/Vue学习笔记-实例/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -301,9 +301,7 @@
       
 
       
-        
-          
-            <h1 id="Vue学习笔记"><a href="#Vue学习笔记" class="headerlink" title="Vue学习笔记"></a>Vue学习笔记</h1><hr>
+        <h1 id="Vue学习笔记"><a href="#Vue学习笔记" class="headerlink" title="Vue学习笔记"></a>Vue学习笔记</h1><hr>
 <h2 id="一、Vue实例"><a href="#一、Vue实例" class="headerlink" title="一、Vue实例"></a>一、Vue实例</h2><h3 id="1-创建一个Vue实例"><a href="#1-创建一个Vue实例" class="headerlink" title="1. 创建一个Vue实例"></a>1. 创建一个Vue实例</h3><p>每个 Vue 应用都是通过用 ==Vue== 函数创建一个新的 Vue 实例开始的，<br>当创建一个 Vue 实例时，你可以传入一个==选项对象==。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var vm = new Vue(&#123;</span><br><span class="line">  // 选项</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-数据与方法"><a href="#2-数据与方法" class="headerlink" title="2. 数据与方法"></a>2. 数据与方法</h3><ul>
 <li>当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了其 ==data== 对象中能找到的所有的属性。当这些属性的值发生改变时，视图将会产生“响应”，即匹配更新为新的值。</li>
@@ -322,8 +320,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: 1</span><br><span class="line">  &#125;,</span><br><span class="line">  created: function () &#123;</span><br><span class="line">    // `this` 指向 vm 实例</span><br><span class="line">    console.log(&apos;a is: &apos; + this.a)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">// =&gt; &quot;a is: 1&quot;</span><br></pre></td></tr></table></figure>
 <p>比如 ==created== 钩子可以用来在一个实例被创建之后执行代码。也有一些其它的钩子，在实例生命周期的不同阶段被调用，如 ==mounted==、==updated== 和 ==destroyed==。生命周期钩子的 this 上下文指向调用它的 Vue 实例。<br><img src="https://cn.vuejs.org/images/lifecycle.png" alt="image"></p>
 
-          
-        
       
     </div>
     
@@ -340,157 +336,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/24/Form有关问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Abbott">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="QuanKing">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/24/Form有关问题/" itemprop="url">Form有关问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-24T21:45:16+08:00">
-                2018-03-24
-              </time>
+              <a href="/2018/03/24/Form有关问题/" rel="next" title="Form有关问题">
+                <i class="fa fa-chevron-left"></i> Form有关问题
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="form表单有什么作用？有哪些常用的input-标签，分别有什么作用？"><a href="#form表单有什么作用？有哪些常用的input-标签，分别有什么作用？" class="headerlink" title="form表单有什么作用？有哪些常用的input 标签，分别有什么作用？"></a>form表单有什么作用？有哪些常用的input 标签，分别有什么作用？</h2><ol>
-<li>form元素是表单元素的前端处理器，负责数据的收集、打包和发送。</li>
-<li>常用的input标签有：<ul>
-<li>text 定义单行文本框</li>
-<li>password 定义密码域</li>
-<li>checkbox 定义复选框</li>
-<li>radio 定义单选按钮</li>
-<li>file 定义文件域</li>
-<li>submit 定义提交按钮</li>
-<li>reset 定义重置按钮</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="post和get-式的区别？"><a href="#post和get-式的区别？" class="headerlink" title="post和get 式的区别？"></a>post和get 式的区别？</h2><ul>
-<li>get方法是从服务器获取数据，而post是向服务器上传数据</li>
-<li>get方法是将表单中的数据以“名/值”对的形式添加到action所设置的URL后面，并使用“？”符号连接URL，各变量之间使用“&amp;”连接</li>
-</ul>
-<hr>
-<h2 id="在input里，name有什么作用？"><a href="#在input里，name有什么作用？" class="headerlink" title="在input里，name有什么作用？"></a>在input里，name有什么作用？</h2><p>定义表单元素的<strong>名称</strong>后台服务器能够利用该属性来<strong>读取</strong>其中的数据</p>
-<hr>
-<h2 id="radio如何分组"><a href="#radio如何分组" class="headerlink" title="radio如何分组?"></a>radio如何分组?</h2><p>设置<strong>name</strong>属性，设置为相同的一组</p>
-<hr>
-<h2 id="placeholder属性有什么作用"><a href="#placeholder属性有什么作用" class="headerlink" title="placeholder属性有什么作用?"></a>placeholder属性有什么作用?</h2><p>加入提示性的语句</p>
-<hr>
-<h2 id="type-hidden隐藏域有什么作用"><a href="#type-hidden隐藏域有什么作用" class="headerlink" title="type=hidden隐藏域有什么作用?"></a>type=hidden隐藏域有什么作用?</h2><p>如果有数据需要作为参数传递给服务器，使用隐藏域避免数据对表单交互行为的干扰</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -500,440 +367,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/22/设计页面/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Abbott">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="QuanKing">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/22/设计页面/" itemprop="url">设计页面</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T23:06:38+08:00">
-                2018-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="元素分类"><a href="#元素分类" class="headerlink" title="元素分类"></a>元素分类</h1><h2 id="结构语义"><a href="#结构语义" class="headerlink" title="结构语义"></a>结构语义</h2><ul>
-<li>div： 定义一块区域</li>
-<li>span： 在文本中定义区域</li>
-<li>ol： （ordered）无序列表</li>
-<li>ul： （unorder）有序列表</li>
-<li>li： 每条列表项</li>
-<li>dl： 定义列表</li>
-<li>dt： 定义词条</li>
-<li>dd： 定义解释</li>
-<li>p: 段落</li>
-</ul>
-<hr>
-<h2 id="内容语义"><a href="#内容语义" class="headerlink" title="内容语义"></a>内容语义</h2><ul>
-<li>a： 超链接</li>
-<li>abbr： 定义缩写</li>
-<li>address： 定义地址</li>
-<li>var： 定义变量</li>
-<li>pre： 预定义格式文本</li>
-<li>blockquote： 区块引用</li>
-<li>cite： 定义文本</li>
-<li>q： 引用短语</li>
-<li>strong： 定义重要文本</li>
-<li>em： 定义重要文本</li>
-</ul>
-<hr>
-<h2 id="修饰语义"><a href="#修饰语义" class="headerlink" title="修饰语义"></a>修饰语义</h2><ul>
-<li>b： 粗体文本</li>
-<li>i： 斜体文本</li>
-<li>big： 大文本</li>
-<li>small： 小文本</li>
-<li>sup： 上标</li>
-<li>sub： 下标</li>
-<li>bdo： 定义显示方向</li>
-<li>br： 换行</li>
-</ul>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/22/网页设计基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Abbott">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="QuanKing">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/22/网页设计基础/" itemprop="url">网页设计基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T17:45:30+08:00">
-                2018-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>开始系统的学习HTML5的<strong>第四天</strong>，今天创建第一篇<em>markdown</em>。</p>
-<hr>
-<h1 id="网页类型"><a href="#网页类型" class="headerlink" title="网页类型"></a>网页类型</h1><p>根据是否使用了服务器技术，人们把网页分为<strong>静态网页</strong>和<strong>动态网页</strong>。</p>
-<ol>
-<li>静态网页<ul>
-<li>是实实在在保存在服务器上的文件，每个网页都是独立的文件</li>
-<li>网页内容相对稳定</li>
-<li>没有数据库的支持</li>
-<li>交互性差</li>
-</ul>
-</li>
-<li>动态网页<ul>
-<li>以数据库为基础</li>
-<li>可实现更多的网页功能</li>
-<li>只有请求网页时，才会返回完整的网页</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h1 id="网页构成"><a href="#网页构成" class="headerlink" title="网页构成"></a>网页构成</h1><ul>
-<li>文本</li>
-<li>图像</li>
-<li>动画</li>
-<li>连接</li>
-<li>导航条</li>
-<li>表格</li>
-<li>表单</li>
-<li>其他</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/19/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Abbott">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="QuanKing">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/19/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-19T22:54:48+08:00">
-                2018-03-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -941,6 +379,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -961,8 +403,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1008,6 +459,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue学习笔记"><span class="nav-number">1.</span> <span class="nav-text">Vue学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Vue实例"><span class="nav-number">1.1.</span> <span class="nav-text">一、Vue实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建一个Vue实例"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 创建一个Vue实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数据与方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 数据与方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-实例生命周期钩子"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 实例生命周期钩子</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1148,6 +615,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
