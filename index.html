@@ -274,6 +274,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -303,7 +325,18 @@
       
         
           
-            
+            <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<p>题目描述： 输出两个不超过100位的大整数的乘积。<br>输入： 输入两个大整数，如1234567 和 123<br>输出： 输出乘积，如：151851741</p>
+</blockquote>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>所谓大数相乘（Multiplication algorithm），就是指数字比较大，相乘的结果超出了基本类型的表示范围，所以这样的数不能够直接做乘法运算。<br>目前大数乘法算法主要有以下几种思路：</p>
+<ol>
+<li>模拟小学乘法：最简单的乘法竖式手算的累加型；</li>
+<li>分治乘法：最简单的是Karatsuba乘法，一般化以后有Toom-Cook乘法；</li>
+<li>快速傅里叶变换FFT：（为了避免精度问题，可以改用快速数论变换FNTT），时间复杂度O(N lgN lglgN)。具体可参照<a href="https://en.wikipedia.org/wiki/Sch%C3%B6nhage%E2%80%93Strassen_algorithm" target="_blank" rel="noopener">Schönhage–Strassen algorithm</a>；</li>
+<li>中国剩余定理：把每个数分解到一些互素的模上，然后每个同余方程对应乘起来就行；</li>
+</ol>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><h3 id="1-模拟乘法手算累加"><a href="#1-模拟乘法手算累加" class="headerlink" title="1.模拟乘法手算累加"></a>1.模拟乘法手算累加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">      7 8 9 6 5 2</span><br><span class="line">×         3 2 1 1</span><br><span class="line">-----------------</span><br><span class="line">      7 8 9 6 5 2   &lt;---- 第1趟 </span><br><span class="line">    7 8 9 6 5 2     &lt;---- 第2趟 </span><br><span class="line">   ..........       &lt;---- 第n趟 </span><br><span class="line">-----------------</span><br><span class="line">  ? ? ? ? ? ? ? ?   &lt;---- 最后的值用另一个数组表示</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -450,7 +483,7 @@
 <p>simple2.vue:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    这是页面二</span><br><span class="line">    &lt;input type=&quot;text&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></p>
 <p>上例中，当 tabView 的值改变，<component> 就会渲染对应的组件，和路由的效果十分类似，但是地址栏并没有发生改变</component></p>
 <p>但这样一来，每次切换组件都会重新渲染，无法保留组件上的数据。这时可以使用 keep-alive 将组件保留在内存中，避免重新渲染</p>
-<p>页面效果如下：<br><img src="./Vue局部刷新/show.png" alt="image"></p>
+<p>页面效果如下：<br><img src="/2018/07/15/Vue局部刷新/show.png" alt="image"></p>
 
           
         
@@ -1347,7 +1380,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -1358,7 +1391,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>

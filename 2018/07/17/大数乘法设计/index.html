@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="算法," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="不忘初心 方能始终">
+<meta name="description" content="题目 题目描述： 输出两个不超过100位的大整数的乘积。输入： 输入两个大整数，如1234567 和 123输出： 输出乘积，如：151851741  分析所谓大数相乘（Multiplication algorithm），就是指数字比较大，相乘的结果超出了基本类型的表示范围，所以这样的数不能够直接做乘法运算。目前大数乘法算法主要有以下几种思路：  模拟小学乘法：最简单的乘法竖式手算的累加型； 分治">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数乘法设计">
 <meta property="og:url" content="http://yoursite.com/2018/07/17/大数乘法设计/index.html">
 <meta property="og:site_name" content="QuanKing">
-<meta property="og:description" content="不忘初心 方能始终">
+<meta property="og:description" content="题目 题目描述： 输出两个不超过100位的大整数的乘积。输入： 输入两个大整数，如1234567 和 123输出： 输出乘积，如：151851741  分析所谓大数相乘（Multiplication algorithm），就是指数字比较大，相乘的结果超出了基本类型的表示范围，所以这样的数不能够直接做乘法运算。目前大数乘法算法主要有以下几种思路：  模拟小学乘法：最简单的乘法竖式手算的累加型； 分治">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T16:26:52.192Z">
+<meta property="og:updated_time" content="2018-07-17T09:23:40.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大数乘法设计">
-<meta name="twitter:description" content="不忘初心 方能始终">
+<meta name="twitter:description" content="题目 题目描述： 输出两个不超过100位的大整数的乘积。输入： 输入两个大整数，如1234567 和 123输出： 输出乘积，如：151851741  分析所谓大数相乘（Multiplication algorithm），就是指数字比较大，相乘的结果超出了基本类型的表示范围，所以这样的数不能够直接做乘法运算。目前大数乘法算法主要有以下几种思路：  模拟小学乘法：最简单的乘法竖式手算的累加型； 分治">
 
 
 
@@ -272,6 +273,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -299,7 +322,18 @@
       
 
       
-        
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<p>题目描述： 输出两个不超过100位的大整数的乘积。<br>输入： 输入两个大整数，如1234567 和 123<br>输出： 输出乘积，如：151851741</p>
+</blockquote>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>所谓大数相乘（Multiplication algorithm），就是指数字比较大，相乘的结果超出了基本类型的表示范围，所以这样的数不能够直接做乘法运算。<br>目前大数乘法算法主要有以下几种思路：</p>
+<ol>
+<li>模拟小学乘法：最简单的乘法竖式手算的累加型；</li>
+<li>分治乘法：最简单的是Karatsuba乘法，一般化以后有Toom-Cook乘法；</li>
+<li>快速傅里叶变换FFT：（为了避免精度问题，可以改用快速数论变换FNTT），时间复杂度O(N lgN lglgN)。具体可参照<a href="https://en.wikipedia.org/wiki/Sch%C3%B6nhage%E2%80%93Strassen_algorithm" target="_blank" rel="noopener">Schönhage–Strassen algorithm</a>；</li>
+<li>中国剩余定理：把每个数分解到一些互素的模上，然后每个同余方程对应乘起来就行；</li>
+</ol>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><h3 id="1-模拟乘法手算累加"><a href="#1-模拟乘法手算累加" class="headerlink" title="1.模拟乘法手算累加"></a>1.模拟乘法手算累加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">      7 8 9 6 5 2</span><br><span class="line">×         3 2 1 1</span><br><span class="line">-----------------</span><br><span class="line">      7 8 9 6 5 2   &lt;---- 第1趟 </span><br><span class="line">    7 8 9 6 5 2     &lt;---- 第2趟 </span><br><span class="line">   ..........       &lt;---- 第n趟 </span><br><span class="line">-----------------</span><br><span class="line">  ? ? ? ? ? ? ? ?   &lt;---- 最后的值用另一个数组表示</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -313,6 +347,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
       
 
       
@@ -383,8 +423,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -414,7 +463,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -425,7 +474,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -448,6 +497,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">3.</span> <span class="nav-text">解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模拟乘法手算累加"><span class="nav-number">3.1.</span> <span class="nav-text">1.模拟乘法手算累加</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
